@@ -31,7 +31,6 @@ const emitter = (eventName, data = defaultData) => socket.emit('clientMsg', { ev
 window.onload = () => {
   window.canvas = document.querySelector('#canvas');
   window.ctx = canvas.getContext('2d');
-  window.clearButton = document.querySelector('#clearCanvas');
 
   window.socket = io.connect();
 
@@ -47,11 +46,6 @@ window.onload = () => {
     if (socketHandlers[data.eventName]) return socketHandlers[data.eventName](data.data);
     else console.warn(`Missing event handler for ${data.eventName}`);
   });
-
-  canvas.addEventListener('click', e => emitter('drawSquare', {
-    x: e.offsetX - squareSize/2,
-    y: e.offsetY - squareSize/2
-  }));
 
   window.addEventListener('keydown', e => keys[e.key] = true);
   window.addEventListener('keyup', e => keys[e.key] = false);
