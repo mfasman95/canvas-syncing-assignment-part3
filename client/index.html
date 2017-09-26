@@ -1,13 +1,19 @@
-<!DOCTYPE html>
 <html lang="en">
-<head>
-    <script src="https://npmcdn.com/babel-core@5.8.38/browser.min.js"></script>
-    <script type="text/babel" >
-        "use strict";
-    
-    </script>
-</head>
-<body>
-
-</body>
-</html>
+    <head>
+      <style>
+        canvas { border: 1px solid black; }
+      </style>
+    </head>
+    <body>
+      <!-- START MARKUP -->
+      <canvas id="canvas" width="300" height="300">
+        <h1>Canvas Cannot Be Displayed</h1>
+      </canvas>
+      <br/>
+  
+      <!-- LOAD SCRIPTS -->
+      <script src="/socket.io/socket.io.js"></script>
+      <script src="./bundle.js"></script>
+    </body>
+  </html>
+  

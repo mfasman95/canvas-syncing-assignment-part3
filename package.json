@@ -1,0 +1,38 @@
+{
+  "name": "canvas-syncing-assignment-part1",
+  "version": "1.0.0",
+  "main": "./src/server.js",
+  "repository": "https://github.com/mfasman95/canvas-syncing-assignment-part1.git",
+  "author": "Matthew Fasman <mfasman95@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node ./src/server.js",
+    "nodemon": "nodemon ./src/server.js",
+    "babel:watch": "babel --watch ./clientScripts --out-file ./client/bundle.js",
+    "pretest": "eslint ./src --fix",
+    "test": "echo \"Tests complete\""
+  },
+  "dependencies": {
+    "express": "^4.15.5",
+    "socket.io": "^2.0.3"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "eslint": "^4.6.1",
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-plugin-import": "^2.7.0",
+    "nodemon": "^1.12.0"
+  },
+  "eslintConfig": {
+    "extends": "airbnb/base",
+    "rules": {
+      "no-underscore-dangle": "off",
+      "no-plusplus": "off",
+      "no-console": "off"
+    }
+  },
+  "babel": {
+    "presets": ["env"]
+  }
+}
